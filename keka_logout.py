@@ -69,7 +69,7 @@ def keka_logout():
     f.close()
 
     time.sleep(20)
-
+    print time.strftime("Cron Successfully ran last at: " + "%Y-%m-%d %H:%M")
     browser.quit()
 
 
