@@ -1,8 +1,10 @@
 import time
+import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-browser = webdriver.Chrome('chromedriver')
+pwd = os.getcwd()
+browser = webdriver.Chrome(pwd + 'chromedriver')
 
 def keka_logout():
     browser.get("https://discidium.keka.com/#/home")
