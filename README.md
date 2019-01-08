@@ -1,5 +1,6 @@
 # Keka Automation
-Selenium script to automate the login and logout process of keka so we can do something productive
+Selenium script to automate the login and logout process of keka so we can do something productive.
+It uses headless chrome so that it can be deployed on servers as well
 
 
 ### Installation
