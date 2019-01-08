@@ -6,7 +6,9 @@ It uses headless chrome so that it can be deployed on servers as well
 ### Installation
 
   - Install selenium using pip `pip install selenium`
-  - The lastest chrome driver is already supplied
+  - Install chromium using `sudo apt-get install -y chromium-browser`
+  - The lastest chrome driver according to your OS from here:
+    https://sites.google.com/a/chromium.org/chromedriver/downloads
 
 ### Usage
  - Enter your email and password in the both the files
