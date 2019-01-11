@@ -4,6 +4,18 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+#Loading .env file
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+EMAIL = os.environ.get("EMAIL")
+PASSWORD = os.environ.get("PASSWORD")
+
+print(EMAIL)
+
 # Using this to check if its the first time of the day or not
 # Default initiated with True.
 f = open("status_storage.txt", "r")
@@ -31,12 +43,12 @@ def keka_login():
     time.sleep(5)
 
     email = browser.find_element_by_xpath('//*[@id="email"]')
-    email.send_keys("")
+    email.send_keys(EMAIL)
     print('Email Entered')
 
 
     password = browser.find_element_by_xpath('//*[@id="password"]')
-    password.send_keys("")
+    password.send_keys(PASSWORD)
     print('Password Entered')
 
 
