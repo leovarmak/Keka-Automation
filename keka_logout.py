@@ -4,6 +4,16 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+#Loading .env file
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+EMAIL = os.environ.get("EMAIL")
+PASSWORD = os.environ.get("PASSWORD")
+
 # Using this to check if its the first time of the day or not
 # Default initiated with True.
 # instantiate a chrome options object so you can set the size and headless preference
@@ -28,11 +38,11 @@ def keka_logout():
     time.sleep(5)
 
     email = browser.find_element_by_xpath('//*[@id="email"]')
-    email.send_keys("") # Enter your email here
+    email.send_keys(EMAIL) # Enter your email here
     print('Email Entered')
 
     password = browser.find_element_by_xpath('//*[@id="password"]')
-    password.send_keys("") # Enter your password here
+    password.send_keys(PASSWORD) # Enter your password here
     print('Password Entered')
 
 
