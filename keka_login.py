@@ -93,7 +93,7 @@ def keka_login():
     f = open("status_storage.txt", "w")
     f.write("False")
     f.close()
-    print time.strftime("Cron Successfully ran last at: " + "%Y-%m-%d %H:%M")
+    print(time.strftime("Cron Successfully ran last at: " + "%Y-%m-%d %H:%M"))
     browser.quit()
 
 keka_login()
